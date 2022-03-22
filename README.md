@@ -13,5 +13,13 @@ You can get any twemoji urls without parsing DOM or text using [twemoji](https:/
 Example with [gcloud](https://cloud.google.com/sdk/gcloud):
 
 ```bash
-gcloud functions deploy twemoji --region=[region-name] --memory=256 --timeout=3s --source=. --project=[gcp-project-name] --entry-point=twemoji --allow-unauthenticated
+gcloud functions deploy twemoji \
+  --region=[region-name] \
+  --memory=256 \
+  --timeout=3s \
+  --source=. \
+  --entry-point=twemoji \
+  --project=[gcp-project-name] \
+  --trigger-http \
+  --allow-unauthenticated
 ```
